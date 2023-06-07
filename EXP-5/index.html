@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select class="select" onchange="selectSoftware()">
+      <option hidden>--SELECT--</option>
+      <option value="WE">Web Engineering</option>
+      <option value="JAVA">Java</option>
+      <option value="SE">Software Engineering</option>
+      <option value="OS">Operating System</option>
+      <option value="MPMC">Microprocessor and Microcontrollers</option>
+    </select>
+    <h4 class="heading-6"></h4>
+    <script>
+      function selectSoftware() {
+        const optionValue = document.querySelector(".select").value;
+        const heading = document.querySelector(".heading-6");
+        const softwareMap = {
+          WE: "VSCode",
+          JAVA: "Notepad",
+          SE: "UML",
+          OS: "Turbo C",
+          MPMC: "8085 Simulator",
+        };
+        heading.textContent = softwareMap[optionValue];
+      }
+    </script>
+  </body>
+</html>

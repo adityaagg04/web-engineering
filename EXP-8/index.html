@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="alert" onclick="showAlert()">Alert</button>
+    <button id="confirm" onclick="showConfirm()">Confirm</button>
+    <button id="prompt" onclick="showPrompt()">Prompt</button>
+    <script>
+      const alertBtn = document.getElementById("alert");
+      const confirmBtn = document.getElementById("confirm");
+      const promptBtn = document.getElementById("prompt");
+
+      alertBtn.addEventListener("click", () => {
+        window.alert("Alert Popup Box");
+      });
+
+      confirmBtn.addEventListener("click", () => {
+        window.confirm("Confirm Popup Box");
+      });
+
+      promptBtn.addEventListener("click", () => {
+        window.prompt("Alert Popup Box", "Yes");
+      });
+    </script>
+  </body>
+</html>
